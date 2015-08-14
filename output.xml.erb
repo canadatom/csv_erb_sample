@@ -1,0 +1,11 @@
+<%
+json.each do |record|
+	content = JSON.parse(record)
+	puts content
+%>	
+<output>
+	<id><%=#content.id%></id>
+	<name><%=#content.name%></name>
+	<address><%=#content.address%></address>
+</output>
+<% end %>
