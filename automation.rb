@@ -11,9 +11,6 @@ end
 json.pos = 0
 #puts json.read
 
-id = 1
-name = "Tom"
-address = "blah"
-
 erb = ERB.new(File.open("output.xml.erb").read, 0, '>')
 puts erb.result binding
+

@@ -1,11 +1,13 @@
 <%
-json.each do |record|
-	content = JSON.parse(record)
-	puts content
-%>	
+json.each do |records|
+	JSON.parse(records).each do |record|
+%>
+
 <output>
-	<id><%=#content.id%></id>
-	<name><%=#content.name%></name>
-	<address><%=#content.address%></address>
+	<id><%=record['id']%></id>
+	<name><%=record['name']%></name>
+	<address><%=record['address']%></address>
 </output>
+
+	<% end%>	
 <% end %>
